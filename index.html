@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kids Math Practice App</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Using Google Fonts for a modern look -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Setup Screen -->
+    <div id="setupScreen" class="screen">
+      <h1>Math Practice App</h1>
+      <form id="setupForm">
+        <div class="form-group">
+          <label for="age">Enter your age:</label>
+          <input type="number" id="age" name="age" min="5" max="10" required>
+        </div>
+        <div class="form-group">
+          <label for="duration">Test Duration (minutes, 2-30):</label>
+          <input type="number" id="duration" name="duration" min="2" max="30" required>
+        </div>
+        <div class="form-group">
+          <p>Select Question Types:</p>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="qType" value="addition" checked> Addition</label>
+            <label><input type="checkbox" name="qType" value="subtraction" checked> Subtraction</label>
+            <label><input type="checkbox" name="qType" value="multiplication" checked> Multiplication</label>
+            <label><input type="checkbox" name="qType" value="logical" checked> Logical Reasoning</label>
+          </div>
+        </div>
+        <div class="form-group center">
+          <button type="submit" class="btn">Start Test</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Test Screen -->
+    <div id="testScreen" class="screen hidden">
+      <div class="top-bar">
+        <div class="timer" id="timerDisplay"></div>
+        <!-- Moved Submit Test button to top right -->
+        <button id="submitBtn" class="btn submit-btn">Submit Test</button>
+      </div>
+      <div class="question-container" id="questionContainer"></div>
+      <div class="navigation">
+        <button id="prevBtn" class="btn">Previous</button>
+        <button id="nextBtn" class="btn">Next</button>
+      </div>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="resultsScreen" class="screen hidden">
+      <h2>Test Results</h2>
+      <div id="scoreDisplay"></div>
+      <div id="resultsList"></div>
+      <div class="center">
+        <button onclick="location.reload()" class="btn">Restart Test</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
