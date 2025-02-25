@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kids Math Practice App</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Using Google Fonts for a modern look -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h2>Manage Questions</h2>
+
+  <!-- Form to Add/Edit Question -->
+  <form id="questionForm">
+      <label>Category:</label>
+      <select id="categorySelect"></select>
+  
+      <label>Question:</label>
+      <input type="text" id="questionText">
+  
+      <label>quiz_options:</label>
+      <input type="text" id="option1">
+      <input type="text" id="option2">
+      <input type="text" id="option3">
+      <input type="text" id="option4">
+  
+      <label>quiz-correct Answer:</label>
+      <input type="text" id="quiz_correctAnswer">
+  
+      <button type="submit">Save Question</button>
+  </form>
+  
+  <!-- Table to View/Edit/Delete Questions -->
+  <table id="questionTable">
+      <tr>
+          <th>Question</th>
+          <th>Category</th>
+          <th>Actions</th>
+      </tr>
+  </table>
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>

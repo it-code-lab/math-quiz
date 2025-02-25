@@ -9,9 +9,10 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <!-- Setup Screen -->
-    <div id="setupScreen" class="screen">
+  <div id="quiz-loadingIndicator"></div>
+  <div class="quizContainer">
+    <!-- Setup quizScreen -->
+    <div id="setupquizScreen" class="quizScreen">
       <h1>Math Practice App</h1>
       <form id="setupForm">
         <div class="form-group">
@@ -24,7 +25,7 @@
         </div>
         <div class="form-group">
           <p>Select Question Types:</p>
-          <div class="checkbox-group">
+          <div class="quiz-checkbox-group">
             <label><input type="checkbox" name="qType" value="addition" checked> Addition</label>
             <label><input type="checkbox" name="qType" value="subtraction" checked> Subtraction</label>
             <label><input type="checkbox" name="qType" value="multiplication" checked> Multiplication</label>
@@ -37,31 +38,38 @@
       </form>
     </div>
 
-    <!-- Test Screen -->
-    <div id="testScreen" class="screen hidden">
+    <!-- Test quizScreen -->
+    <div id="testquizScreen" class="quizScreen quizHidden">
       <div class="top-bar">
-        <div class="timer" id="timerDisplay"></div>
+        <div class="quiz-timer" id="quiz-timerDisplay"></div>
         <!-- Moved Submit Test button to top right -->
-        <button id="submitBtn" class="btn submit-btn">Submit Test</button>
+        <button id="submitBtn" class="btn quiz-submit-btn">Submit Test</button>
       </div>
-      <div class="question-container" id="questionContainer"></div>
-      <div class="navigation">
+      <div class="question-quizContainer" id="questionquizContainer"></div>
+      <div class="quiz-navigation">
         <button id="prevBtn" class="btn">Previous</button>
         <button id="nextBtn" class="btn">Next</button>
       </div>
     </div>
 
-    <!-- Results Screen -->
-    <div id="resultsScreen" class="screen hidden">
-      <h2>Test Results</h2>
+    <!-- quiz-results quizScreen -->
+    <div id="quiz-resultsquizScreen" class="quizScreen quizHidden">
+      <h2>Test quiz-results</h2>
       <div id="scoreDisplay"></div>
-      <div id="resultsList"></div>
+      <div id="quiz-resultsList"></div>
       <div class="center">
         <button onclick="location.reload()" class="btn">Restart Test</button>
       </div>
     </div>
   </div>
-
+  <div id="leaderboardquizContainer"></div>
+  <div id="achievementsquizContainer"></div>
+  <div id="certificatequizContainer"></div>
+  <div id="shareLinks"></div>
+  
+  <p id="rankDisplay"></p>
+  <p id="percentileDisplay"></p>
+  
   <script src="script.js"></script>
 </body>
 </html>
