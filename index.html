@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kids Math Practice App</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="quiz_style.css">
   <!-- Using Google Fonts for a modern look -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 </head>
@@ -16,12 +16,12 @@
       <h1>Math Practice App</h1>
       <form id="setupForm">
         <div class="form-group">
-          <label for="age">Enter your age:</label>
+          <label for="age">Select age group:</label>
           <input type="number" id="age" name="age" min="5" max="10" required>
         </div>
         <div class="form-group">
-          <label for="duration">Test Duration (minutes, 2-30):</label>
-          <input type="number" id="duration" name="duration" min="2" max="30" required>
+          <label for="duration">Test Duration (minutes, 1-30):</label>
+          <input type="number" id="duration" name="duration" min="1" max="30" required>
         </div>
         <div class="form-group">
           <p>Select Question Types:</p>
@@ -70,6 +70,6 @@
   <p id="rankDisplay"></p>
   <p id="percentileDisplay"></p>
   
-  <script src="script.js"></script>
+  <script src="quiz_script.js"></script>
 </body>
 </html>
